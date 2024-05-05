@@ -14,9 +14,9 @@ export default function Index() {
       <h1>Welcome to Remix (SPA Mode)</h1>
       <ul>
         {
-          Array.from({ length: 9 }, (_, i) => i + 1).map(i => 
-          <li key={i}><Link to={`/fetched/${i}`}>{i}</Link></li>
-        )
+          Array.from({ length: 9 }, (_, i) => i + 1).map(i =>
+            <li key={i}><Link to={`/fetched/${i}`}>{i}</Link></li>
+          )
         }
       </ul>
     </div>
