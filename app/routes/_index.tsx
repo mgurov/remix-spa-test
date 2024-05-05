@@ -15,7 +15,7 @@ export default function Index() {
       <ul>
         {
           Array.from({ length: 9 }, (_, i) => i + 1).map(i => 
-          <li key={i}><Link to={`/fetched/$i`}>{i}</Link></li>
+          <li key={i}><Link to={`/fetched/${i}`}>{i}</Link></li>
         )
         }
       </ul>
