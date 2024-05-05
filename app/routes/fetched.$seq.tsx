@@ -5,7 +5,7 @@ export default function NumberFetcher() {
     const params = useParams();
     const seq = params['seq'];
     
-    const url = `http://localhost:8080/api/data/${seq}?delay=2`
+    const url = `/api/data/${seq}?delay=2`
 
     const { data, error, loading } = useAxios({
         url: url,
