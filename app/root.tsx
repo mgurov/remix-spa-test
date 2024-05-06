@@ -6,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { Button } from "antd";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,7 +18,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <Link to="/">Hjem.</Link>
+      <Link to="/"><Button type="primary">Hjem.</Button></Link>
         {children}
         <ScrollRestoration />
         <Scripts />
