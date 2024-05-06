@@ -1,11 +1,12 @@
-import { useParams } from "@remix-run/react";
+import { useParams, useSearchParams } from "@remix-run/react";
 import useAxios from "~/etc/axios";
 
 export default function NumberFetcher() {
+    const [searchParams] = useSearchParams();
     const params = useParams();
     const seq = params['seq'];
     
-    const url = `/api/data/${seq}?delay=2`
+    const url = `/api/data/${seq}?delay=2&fail=${searchParams.get('fail') ?? 'false'}`
 
     const { data, error, loading } = useAxios({
         url: url,
