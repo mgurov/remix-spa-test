@@ -1,4 +1,5 @@
 import { useParams, useSearchParams } from "@remix-run/react";
+import Json from "~/etc/Json";
 import useAxios from "~/etc/axios";
 
 export default function NumberFetcher() {
@@ -19,7 +20,7 @@ export default function NumberFetcher() {
     return (
         <div>
             <h1>Data Fetched</h1>
-            <pre>{JSON.stringify(data, null, 2)}</pre>
+            <Json value={data} />
         </div>
     );
 }

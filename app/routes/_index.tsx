@@ -19,6 +19,7 @@ export default function Index() {
           )
         }
         <li><Link to={`/fetched/15?fail=true`}>15 w. err</Link></li>
+        <li><Link to={`/counterfetched`}>Counter fetched</Link></li>
       </ul>
     </div>
   );
